@@ -1,8 +1,12 @@
 # Test Devise Users - basic set-up with Rails 7 + Users Resources
 
-Reference: https://www.digitalocean.com/community/tutorials/how-to-set-up-user-authentication-with-devise-in-a-rails-7-application
+Going to add on a top-nav bar and ability to add a user profile page.
 
-## Initial setup:
+
+
+## Initial setup from the Basic version:
+
+Reference: https://www.digitalocean.com/community/tutorials/how-to-set-up-user-authentication-with-devise-in-a-rails-7-application
 
 1. Create a new app:
 ```
