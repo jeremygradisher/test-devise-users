@@ -1,0 +1,21 @@
+<h1><%= @user.email %></h1>
+
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <th>First Name</th>
+      <td><%= @user.first_name %></td>
+    </tr>
+    <tr>
+      <th>Last Name</th>
+      <td><%= @user.last_name %></td>
+    </tr>
+    <tr>
+      <th>Is Admin</th>
+      <td><%= @user.is_admin ? 'Yes' : 'No' %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to "Edit", edit_user_path(@user), class: "btn btn-primary" %>
+<%= link_to "Back", users_path, class: "btn btn-secondary" %>
