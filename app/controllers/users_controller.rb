@@ -23,8 +23,14 @@ class UsersController < ApplicationController
     end
   
     def destroy
-      @user.destroy
-      redirect_to users_url, notice: 'User was successfully destroyed.'
+      @user = User.find(params[:id])
+      respond_to do |format|
+        if @user.destroy
+          redirect_to users_url, notice: 'User was successfully destroyed.'
+        else
+          redirect_to users_url, alert: 'Failed to destroy user.'
+        end
+      end
     end
   
     private

@@ -20,7 +20,16 @@
         <td>
           <%= link_to "Show", user_path(user), class: "btn btn-sm btn-outline-primary me-1" %>
           <%= link_to "Edit", edit_user_path(user), class: "btn btn-sm btn-outline-secondary me-1" %>
-          <%= link_to "Delete", user_path(user), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-outline-danger" %>
+          <%= link_to "Delete", 
+                      user_path(user), 
+                      method: :delete, 
+                      data: { confirm: "Are you sure?", turbo: false }, 
+                      class: "btn btn-sm btn-outline-danger" %>
+          <%#= link_to "Delete (Turbo)", 
+                      user_path(user), 
+                      method: :delete, 
+                      data: { confirm: "Are you sure?" }, 
+                      class: "btn btn-sm btn-outline-danger" %>
         </td>
       </tr>
     <% end %>
