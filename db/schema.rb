@@ -23,6 +23,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_03_153643) do
     t.boolean "is_admin", default: false
     t.string "first_name"
     t.string "last_name"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
