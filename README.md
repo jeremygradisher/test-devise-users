@@ -3,7 +3,15 @@
 Going to add on a top-nav bar and ability to add a user profile page.
 
 This is all functional, with exception to the delete function on the user#index page. I am still working on that. It is possible the error has something to do with Turbo Rails. I am not sure yet.
-
+Update, the following fixed the issue:
+```Ruby
+<%= link_to "Delete", 
+                      user_path(user), 
+                      method: :delete, 
+                      "data-turbo-method": "delete",
+                      "data-turbo-confirm": { confirm: "Are you sure?", turbo: false }, 
+                      class: "btn btn-sm btn-outline-danger" %>
+```
 
 
 ## Initial setup from the Basic version:
