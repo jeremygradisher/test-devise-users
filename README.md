@@ -1,6 +1,8 @@
 # Test Devise Users - basic set-up with Rails 7 + Users Resources
 
-Going to add on a top-nav bar and ability to add a user profile page.
+User resources now working. Only admins can make changes to others account. Users can edit or delete their own account.
+
+---
 
 This is all functional, with exception to the delete function on the user#index page. I am still working on that. It is possible the error has something to do with Turbo Rails. I am not sure yet.
 <b>Update, the following fixed the issue:</b>
