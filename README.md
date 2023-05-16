@@ -17,6 +17,10 @@ This is all functional, with exception to the delete function on the user#index 
 ---
 
 ## Tried to set-up some testing with RSpec, but it is not working. I am not sure why. I am still working on it.
+This was where I was going with it:
+```
+bundle exec rspec spec/features/user_sign_up_spec.rb
+```
 
 
 ## Initial setup from the Basic version:
