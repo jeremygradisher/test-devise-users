@@ -14,6 +14,10 @@ This is all functional, with exception to the delete function on the user#index 
     class: "btn btn-sm btn-outline-danger" %>
 ```
 
+---
+
+## Tried to set-up some testing with RSpec, but it is not working. I am not sure why. I am still working on it.
+
 
 ## Initial setup from the Basic version:
 
