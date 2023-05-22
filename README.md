@@ -4,25 +4,6 @@ User resources now working. Only admins can make changes to others account. User
 
 ---
 
-This is all functional, with exception to the delete function on the user#index page. I am still working on that. It is possible the error has something to do with Turbo Rails. I am not sure yet.
-<b>Update, the following fixed the issue:</b>
-```Ruby
-<%= link_to "Delete", 
-    user_path(user), 
-    "data-turbo-method": "delete",
-    "data-turbo-confirm": { confirm: "Are you sure?", turbo: false }, 
-    class: "btn btn-sm btn-outline-danger" %>
-```
-
----
-
-## Tried to set-up some testing with RSpec, but it is not working. I am not sure why. I am still working on it.
-This was where I was going with it:
-```
-bundle exec rspec spec/features/user_sign_up_spec.rb
-```
-
-
 ## Initial setup from the Basic version:
 
 Reference: https://www.digitalocean.com/community/tutorials/how-to-set-up-user-authentication-with-devise-in-a-rails-7-application
