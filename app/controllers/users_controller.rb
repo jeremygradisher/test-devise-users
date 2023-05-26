@@ -34,6 +34,12 @@ class UsersController < ApplicationController
         end
       end
     end
+
+    def delete_avatar
+      @user = User.find(params[:id])
+      @user.avatar.purge
+      redirect_to @user, notice: 'Avatar was successfully deleted.'
+    end
   
     private
       def set_user
@@ -47,7 +53,7 @@ class UsersController < ApplicationController
       end
   
       def user_params
-        params.require(:user).permit(:email, :password, :password_confirmation, :first_name, :last_name, :is_admin)
+        params.require(:user).permit(:email, :password, :password_confirmation, :first_name, :last_name, :is_admin, :avatar)
       end
   end
   
